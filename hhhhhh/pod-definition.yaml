@@ -3,7 +3,7 @@ kind: Deployment
 metadata: 
   name :  httpd-frontend    
   labels:
-    name: httpd-frontend
+    name: nginx-frontend
 spec:
   template:
     metadata: 
@@ -11,9 +11,9 @@ spec:
          name: httpd-frontend
     spec: 
       containers:
-      - image: httpd:2.4-alpine
+      - image: nginx:stable-perl
         name: httpd-frontend
-  replicas: 3
+  replicas: 2
   selector: 
     matchLabels: 
-      name: httpd-frontend
+      name: nginx-frontend
