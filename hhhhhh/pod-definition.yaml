@@ -3,7 +3,7 @@ kind: Deployment
 metadata: 
   name :  httpd-frontend    
   labels:
-    name: nginx-frontend
+    name: httpd-frontend
 spec:
   template:
     metadata: 
@@ -16,4 +16,4 @@ spec:
   replicas: 2
   selector: 
     matchLabels: 
-      name: nginx-frontend
+      name: httpd-frontend
